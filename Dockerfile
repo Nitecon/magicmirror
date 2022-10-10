@@ -4,7 +4,8 @@ RUN apt update -y && apt install -y ca-certificates git
 RUN mkdir -p /data && \
     cd /data && git clone -q https://github.com/MichMich/MagicMirror && \
     cd /data/MagicMirror && \
-    npm run install-mm
+    npm run install-mm && \
+    npm install ical-expander
 
 WORKDIR /data/MagicMirror
 
